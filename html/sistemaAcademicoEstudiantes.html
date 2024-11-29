@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/sistemaAcademicoEstudiantes.css">
+    <title>Sistema Académico</title>
+    <script>
+        // Definir preguntas, respuestas y puntajes
+        var preguntas = [
+            {
+                pregunta: "¿Cuál de las siguientes bibliotecas de Python se utiliza comúnmente para el análisis de datos?",
+                respuestas: ["TensorFlow", "PyTorch", "Pandas", "Scikit-Learn"],
+                respuestaCorrecta: "Pandas",
+                puntaje: 10
+            },
+            {
+                pregunta: "En marketing digital, ¿qué es CTR?",
+                respuestas: ["Click Through Rate", "Conversion Tracking Ratio", "Customer Target Reach", "Campaign Timeframe Ratio"],
+                respuestaCorrecta: "Click Through Rate",
+                puntaje: 10
+            },
+            
+        ];
+
+        // Inicializar variables para evaluar
+        var puntajeTotal = 0;
+
+        // Función para cargar preguntas en la tabla
+        function cargarPreguntas() {
+            var tablaPreguntas = document.getElementById("tabla-preguntas");
+
+            for (var i = 0; i < preguntas.length; i++) {
+                var fila = tablaPreguntas.insertRow(-1);
+                var celdaPregunta = fila.insertCell(0);
+                var celdaRespuesta = fila.insertCell(1);
+
+                celdaPregunta.innerHTML = preguntas[i].pregunta;
+
+                var selectRespuesta = document.createElement("select");
+                for (var j = 0; j < preguntas[i].respuestas.length; j++) {
+                    var opcion = document.createElement("option");
+                    opcion.value = preguntas[i].respuestas[j];
+                    opcion.text = preguntas[i].respuestas[j];
+                    selectRespuesta.add(opcion);
+                }
+                celdaRespuesta.appendChild(selectRespuesta);
+            }
+        }
+
+        // Función para evaluar respuestas y calcular puntaje
+        function evaluar() {
+            puntajeTotal = 0;
+
+            var tablaPreguntas = document.getElementById("tabla-preguntas");
+            for (var i = 0; i < preguntas.length; i++) {
+                var selectRespuesta = tablaPreguntas.rows[i + 1].cells[1].getElementsByTagName("select")[0];
+                var respuestaSeleccionada = selectRespuesta.value;
+
+                if (respuestaSeleccionada === preguntas[i].respuestaCorrecta) {
+                    puntajeTotal += preguntas[i].puntaje;
+                }
+            }
+
+            alert("Tu puntaje es: " + puntajeTotal);
+        }
+
+        // Cargar preguntas al cargar la página
+        window.addEventListener('DOMContentLoaded', (event) => {
+            cargarPreguntas();
+        });
+    </script>
+</head>
+
+    <body>
+        <header class="header-academico">
+            <h1 class="header-title">Bienvenido al Sistema Académico</h1>
+        </header>
+    
+        <section class="sistema-container">
+            <h2 class="sistema-title">Información Académica</h2>
+            <p class="welcome-message">¡Hola, [Nombre del estudiante]!</p>
+    
+            <h3>Calificaciones</h3>
+            <table class="centered-table" >
+                <thead>
+                    <tr>
+                        <th>Asignatura</th>
+                        <th>Nota</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Curso de Diseño Web</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Curso de Programación en Python</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Curso de Marketing Digital</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>Curso de Ciencia de Datos</td>
+                        <td>5</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <h3>Horario</h3>
+            <table class="centered-table">
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Materia</th>
+                        <th>Hora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>Curso de Diseño Web</td>
+                        <td>8:00 AM - 9:30 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>Curso de Programación en Python</td>
+                        <td>10:00 AM - 11:30 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>Curso de Marketing Digital</td>
+                        <td>9:00 AM - 10:30 AM</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>Curso de Ciencia de Datos</td>
+                        <td>7:00 AM - 9:00 AM</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <!-- Agregar tabla de preguntas -->
+            <h3>Evaluar</h3>
+            <table id="tabla-preguntas" class="centered-table">
+                <thead>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>Respuesta</th>
+                    </tr>
+                </thead>
+            </table>
+    
+            <!-- Botón para evaluar -->
+            <button onclick="evaluar()" class="btn">Evaluar</button>
+    
+            <a href="../html/inicioSesion.html" class="btn">Cerrar Sesión</a>
+        </section>
+    </body>
+
+    
+    
+</body>
+</html>

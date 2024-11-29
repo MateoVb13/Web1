@@ -1,0 +1,72 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.header-academico {
+    background-image: url(../recursos/imagenes/fondo.jpg);
+background-size: cover;
+background-position: center center;
+color: #ffffff;
+text-align: center;
+padding-top: 50px;
+padding-bottom: 150px;
+-webkit-text-stroke: 0.8px black;
+text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+}
+
+.header-title {
+    font-size: 36px;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.sistema-container {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+}
+
+.sistema-title {
+    font-size: 28px;
+    color: #1f851a;
+    margin-bottom: 20px;
+}
+
+.welcome-message {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #1f851a;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #2576b7;
+}
+
+
+.centered-table {
+    margin: 0 auto; 
+    margin-bottom: 40px;
+
+}

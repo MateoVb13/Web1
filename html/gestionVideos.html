@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/gestionVideos.css">
+    <title>Agregar Videos</title>
+</head>
+<body>
+
+    <h1>Agregar Videos</h1>
+
+    <form id="video-form">
+        <label for="codigo">Código:</label>
+        <input type="text" id="codigo" name="codigo" required><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="url">URL:</label>
+        <input type="text" id="url" name="url" required><br>
+
+        <label for="idioma-original">Idioma Original:</label>
+        <input type="text" id="idioma-original" name="idioma-original" required><br>
+
+        <label for="idiomas-disponibles">Idiomas Disponibles para Escuchar:</label>
+        <input type="text" id="idiomas-disponibles" name="idiomas-disponibles" required><br>
+
+        <label for="subtitulos-disponibles">Subtítulos Disponibles:</label>
+        <input type="text" id="subtitulos-disponibles" name="subtitulos-disponibles" required><br>
+
+        <label for="duracion">Duración (hh:mm:ss):</label>
+        <input type="text" id="duracion" name="duracion" required><br>
+
+        <button type="submit">Agregar Video</button>
+        <a href="panelAdministradores.html" class="btn">Volver</a>
+    </form>
+
+    <h2>Videos Agregados</h2>
+    <ul id="video-list"></ul>
+    
+</body>
+</html>

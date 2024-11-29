@@ -1,0 +1,233 @@
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(../recursos/imagenes/fondo.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 150px;
+    -webkit-text-stroke: 0.8px black;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: #1f851a;
+    padding: 15px 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+section {
+    background-color: #fff;
+    padding: 40px;
+    margin: 20px;
+    border: 1px solid #ddd;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cursos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.curso {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    width: 45%; 
+}
+
+.curso h3 {
+    font-size: 20px;
+    color: #1f851a;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-social {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.red-social a {
+    text-decoration: none; 
+    color: #333; 
+    display: block; 
+}
+
+.red-social img {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.red-social p {
+    margin: 0;
+}
+
+
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.instructor {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.instructor img {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructor p {
+    margin: 0;
+}
+
+.img{
+
+    width: 50px;
+    height: 50px;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.cursos-section {
+    padding: 40px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.cursos-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.curso {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curso:hover {
+    transform: scale(1.05);
+}
+
+.img {
+    width: 120px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.curso-info {
+    text-align: center;
+}
+
+h3 {
+    color: #3498db;
+}
+
+p>div {
+    color: #000000;
+}
+header h3 {
+    color: #ffffff;
+}
+
+.a{
+    
+    text-decoration: none;
+}
+
+/* Estilos para la sección de búsqueda */
+.busqueda-section {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+}
+
+.busqueda-section input {
+    margin-right: 10px; /* Espacio entre el campo de búsqueda y el botón */
+}
+
+.busqueda-section button {
+    padding: 8px 15px;
+    background-color: #0e360c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
